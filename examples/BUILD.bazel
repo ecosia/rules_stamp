@@ -1,0 +1,18 @@
+load("@ecosia_rules_stamp//:defs.bzl", "stamp")
+load("@ecosia_rules_stamp//examples:rule.bzl", "myrule")
+
+stamp(
+    name = "stamp",
+    stamp_keys = ["TEST"],
+)
+
+sh_test(
+    name = "read_stamp",
+    srcs = ["read_stamp.sh"],
+    data = [":stamp"],
+)
+
+myrule(
+    name = "echo_stamps",
+    stamp_files = ":stamp",
+)

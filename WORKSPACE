@@ -1,0 +1,1 @@
+workspace(name = "ecosia_rules_stamp")
