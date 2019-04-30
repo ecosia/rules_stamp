@@ -15,4 +15,6 @@ http_archive(
 
 ### stamp
 
+Extracts the stamp values out based on the specified keys and outputs them into a file for format `STAMP_<key>`. So one can depend on it in another rule or binary and get the stamping value easier, e.g. by just using `cat`.
+
 `stamp(name, stamp_keys)`
